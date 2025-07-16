@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .open-sans-normal {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -8,7 +11,7 @@
 }
 
 /* shared style */
-.secondary-bg{
+.secondary-bg {
   background-color: #FFF8F3;
 }
 
@@ -51,7 +54,7 @@
   color: #757575;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
@@ -114,91 +117,104 @@ nav li a {
 }
 
 /* main styles */
-main{
+main {
   max-width: 1140px;
   margin: 0 auto;
 }
-main section{
+
+main section {
   margin-bottom: 130px;
 }
+
 /* about styles */
-.about{
+.about {
   border-radius: 10px;
   padding: 130px 150px;
   text-align: center;
   margin-top: 130px;
 }
 
-.about-items{
+.about-items {
   display: flex;
   justify-content: space-between;
 }
 
-.item-description{
+.item-description {
   font-weight: 600;
 }
 
-.item-title{
+.item-title {
   color: #757575;
   font-size: 20px;
 }
 
-.item-description{
+.item-description {
   color: #474747;
   font-size: 20px;
 }
 
 /* skills section styles */
-.skills-container{
+.skills-container {
   display: flex;
   gap: 24px;
 }
-.skill{
+
+.skill {
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0px 6px 50px 0px rgba(0,0,0,0.06);
+  box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
 }
 
 /* resume styles */
 
-.resume-container{
+.resume-container {
   display: flex;
   gap: 20px;
 }
 
+.resume-column {
+  padding-left: 20px;
+}
 
-.experience-sub-title{
+
+.experience-sub-title {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.experience-description,.experience-sub-title {
-  color:#757575
+.experience-description,
+.experience-sub-title {
+  color: #757575
 }
-.experience-title{
+
+.experience-title {
   color: #474747
 }
 
-.resume hr{
-  margin: 30px  5px;
+.resume hr {
+  margin: 30px 5px;
 }
-.resume-download-cv{
+
+.resume-download-cv {
   margin-top: 20px;
 }
 
 /* footer styles */
 
-footer{
+footer {
   display: flex;
   padding: 130px 230px;
   gap: 100px;
 }
-.footer-column{
+
+.footer-column {
   width: 50%;
 }
 
-footer input[type='text'], footer input[type='email'],footer textarea {
+footer input[type='text'],
+footer input[type='email'],
+footer textarea {
   height: 64px;
   border-radius: 5px;
   background-color: white;
@@ -211,12 +227,26 @@ footer input[type='text'], footer input[type='email'],footer textarea {
 
 /* responsive media query */
 
-.hide{
+.hide {
   display: none;
 }
 
 @media screen and (max-width:576px) {
-   .skills-container{
+
+  .skills-container, .resume-container, footer {
     flex-direction: column;
-   }
+  }
+
+  footer {
+  
+    padding: 20px;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  footer input[type='text'],
+  footer input[type='email'],
+  footer textarea {
+    width: calc(100% - 40px);
+  }
 }
